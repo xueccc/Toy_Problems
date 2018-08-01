@@ -17,7 +17,6 @@ var moveZeroes = function(nums) {
   for (var j = nums.length - 1; j >= nums.length - zeroes; j-- ) {
       nums[j] = 0
   }
-  console.log(nums)
   return nums
 };
 
