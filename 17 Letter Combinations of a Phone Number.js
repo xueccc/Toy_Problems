@@ -7,8 +7,8 @@
 //c: n/a
 //e: n/a
 
-'2': ['a', 'b', 'c']
-'3': ['d', 'e', 'f']
+// '2': ['a', 'b', 'c']
+// '3': ['d', 'e', 'f']
 
 //create phoneKeys
 //create combos
