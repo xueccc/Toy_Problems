@@ -15,6 +15,8 @@ var addTwoNumbers = function(l1, l2) {
   var sum = [];
   var ls;
   var tail;
+  var carryVal = 0;
+  var arr = [];
   while (l1 !== 0 && l2 !== 0) {
     sum[index] = (l1.val + l2.val)
     index++
@@ -25,16 +27,32 @@ var addTwoNumbers = function(l1, l2) {
   
   while (index >= 0) {
       console.log(sum[index])
+      var value = sum[index]
       if (!ls) {
-        ls = {val: sum[index], next: null}
+        ls = {val: value, next: null}
         tail = ls
       } else {
-        tail.next = {val: sum[index], next: null}
+        if (carryVal === 1) {
+         value++
+         carryVal--
+        }
+        if (value > 9) {
+            carryVal = 1;
+            value = value - 10;
+        }
+        tail.next = {val: value, next: null}
+        tail = tail.next
+        
       }
+     
+      arr[index] = value
       index--;
   }
-  console.log(ls)
-  return ls;
+   if (carryVal = 1) {
+          arr.shift(1);
+      }
+  
+  return arr;
 };
 
 
