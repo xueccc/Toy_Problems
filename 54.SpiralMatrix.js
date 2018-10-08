@@ -1,5 +1,5 @@
-public class Solution {
-  public List<Integer> spiralOrder(int[][] matrix) {
+class Solution {
+  List<Integer> spiralOrder(int[][] matrix) {
       
       List<Integer> res = new ArrayList<Integer>();
       
